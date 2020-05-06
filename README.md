@@ -11,7 +11,7 @@
 
 * [Usage](#Usage) 
 
-* [Our Team](#our-team)
+* [Our Team](#Our-team)
 
 
 - - - 
@@ -24,21 +24,21 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 
 > Its task is to maintain appropriate **Social distance**.
 
-<img  src = images/socialDistance.png width="200" >
+<img  src = images/socialDistance.png width="200" align="center">
 
 *   Second camera
 
 > 1.   Its first task is face mask detection which aim to detect faces and detect whether the mouth and nose of each entering employee are properly covered with face mask or not.
 
-<img  src = images/face.jpg width="200">
+<img  src = images/face.jpg width="200" align="center">
 
 >2.   Its second task is to detect if the employee is wearing gloves or not 
 
-<img  src = images/gloves_and_mask.jpg width="200">
+<img  src = images/gloves_and_mask.jpg width="200" align="center">
 
 >3.  If the employee follows safety rules mentioned above, then the third task is OCR system which aim to detect ID of an employee entering the company. And record in sheet his/her arrival time
 
-<img  src = images/fingerprint.jpg width="200">
+<img  src = images/fingerprint.jpg width="200" align="center">
 
 
 ## Installation
@@ -52,13 +52,26 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 4. Insert in ***model*** folder, download [yolo weights](https://pjreddie.com/media/files/yolov3.weights
 )
 
-##Usage
+## Usage
 >click on **main.exe**
 
 
 *   Social distancing
 
-<img  src = images/Social_distance_demo.gif>
+<img  src = images/Social_distance_demo.gif align="center">
 
-<img  src = images/Login_Demo.gif>
+*   Fingerprint system
+
+<img  src = images/Login_Demo.gif align="center">
+
+## Our-team
+
+
+1.   Omar Hesham Hanfy
+2.   Omar Mohamed Alam
+3.   Martin Joseph William
+4.   Mark Youssef Shouhdy
+5.   Mahmoud Ibrahim Mohamed
+
+
 
