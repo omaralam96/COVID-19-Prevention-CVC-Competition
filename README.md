@@ -40,7 +40,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 
 <p align="center"><img  src = images/fingerprint.jpg width="200" ></p>
 
-
+- - - 
 ## Installation
 
 ### Steps to install
@@ -51,7 +51,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 3. Install [pytesseract](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20200328.exe) for OCR detection
 4. Insert in ***model*** folder, download [yolo weights](https://pjreddie.com/media/files/yolov3.weights
 )
-
+- - - 
 ## Usage
 >click on **main.exe**
 
@@ -63,6 +63,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 *   Fingerprint system
 
 <p align="center"><img  src = images/Login_Demo.gif ></p>
+- - - 
 
 ## Our-team
 
