@@ -24,21 +24,21 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 
 > Its task is to maintain appropriate **Social distance**.
 
-<img  src = images/socialDistance.png>
+<img  src = images/socialDistance.png width="200" >
 
 *   Second camera
 
 > 1.   Its first task is face mask detection which aim to detect faces and detect whether the mouth and nose of each entering employee are properly covered with face mask or not.
 
-<img  src = images/face.jpg>
+<img  src = images/face.jpg width="200">
 
 >2.   Its second task is to detect if the employee is wearing gloves or not 
 
-<img  src = images/gloves_and_mask.jpg>
+<img  src = images/gloves_and_mask.jpg width="200">
 
 >3.  If the employee follows safety rules mentioned above, then the third task is OCR system which aim to detect ID of an employee entering the company. And record in sheet his/her arrival time
 
-<img  src = images/fingerprint.jpg>
+<img  src = images/fingerprint.jpg width="200">
 
 
 ## Installation
@@ -59,4 +59,6 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 *   Social distancing
 
 <img  src = images/Social_distance_demo.gif>
+
+<img  src = images/Login_Demo.gif>
 
