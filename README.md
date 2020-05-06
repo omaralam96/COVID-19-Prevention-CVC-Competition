@@ -15,7 +15,8 @@
 
 
 - - - 
-##Description
+## Description
+
 Our Project’s idea is to mimic the fingerprint systems that is found in companies to record the arrival and leaving time of employees but instead of using fingers to avoid the spread of corona virus, we will use two cameras as follow:
 
 
@@ -33,15 +34,16 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 
 >2.   Its second task is to detect if the employee is wearing gloves or not 
 
-<img  src = images/gloves and mask.jpg>
+<img  src = images/gloves_and_mask.jpg>
 
 >3.  If the employee follows safety rules mentioned above, then the third task is OCR system which aim to detect ID of an employee entering the company. And record in sheet his/her arrival time
 
 <img  src = images/fingerprint.jpg>
 
 
-##Installation
-###Steps to install
+## Installation
+
+### Steps to install
 
 1. Clone the repository. 
 2. Install the required packages.
