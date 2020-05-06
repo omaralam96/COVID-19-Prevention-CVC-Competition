@@ -64,6 +64,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 
 <p align="center"><img  src = images/Login_Demo.gif ></p>
 - - - 
+
 ## Our-team
 
 
