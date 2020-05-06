@@ -1,0 +1,12 @@
+numpy
+cv2
+sys
+os
+datetime
+pytesseract
+qimage2ndarray
+itertools
+openpyxl
+operator
+PyQt5
+pyinstaller
