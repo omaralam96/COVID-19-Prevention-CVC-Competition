@@ -42,6 +42,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 
 <p align="center"><img  src = images/fingerprint.jpg width="200" ></p>
 >Check our [Demo](https://youtu.be/K5b9-6nKKRI)
+
 - - - 
 ## Installation
 
