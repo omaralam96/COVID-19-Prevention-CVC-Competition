@@ -4,7 +4,7 @@
 
 # COVID-19-Prevention
 
->[Demo](https://youtu.be/K5b9-6nKKRI)
+
 
 ## Content
 * [Description](#Description)
@@ -41,7 +41,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 >3.  If the employee follows safety rules mentioned above, then the third task is OCR system which aim to detect ID of an employee entering the company. And record in sheet his/her arrival time
 
 <p align="center"><img  src = images/fingerprint.jpg width="200" ></p>
-
+>Check our [Demo](https://youtu.be/K5b9-6nKKRI)
 - - - 
 ## Installation
 
