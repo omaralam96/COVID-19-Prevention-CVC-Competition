@@ -1,1 +1,2 @@
-<h1>Folder to be developed by social distance developing<h1>
+<h1>NOTE<h1>
+<h5>Please Download YOLLO wieghts file and put it in this directory[SEE YoloLinks.txt]
