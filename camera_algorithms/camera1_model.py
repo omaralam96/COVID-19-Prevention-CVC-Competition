@@ -1,3 +1,4 @@
+
 import time
 import itertools
 import cv2
@@ -5,9 +6,9 @@ import numpy as np
 from operator import itemgetter
 
 class PeopleDetector:
-    def __init__(self, yolocfg='model/yolov3.cfg',
-                 yoloweights='model/yolov3.weights',
-                 labelpath='model/coco.names',
+    def __init__(self, yolocfg='camera_algorithms/yolo_weights/yolov3.cfg',
+                 yoloweights='camera_algorithms/yolo_weights/yolov3.weights',
+                 labelpath='camera_algorithms/yolo_weights/coco.names',
                  confidence=0.8,#0.5.
                  nmsthreshold=0.4):
         self._yolocfg = yolocfg
@@ -24,7 +25,8 @@ class PeopleDetector:
         self._classIDs = []
         self._centers = []
         self._layerouts = []
-        self._MIN_DIST = 500
+        self._MIN_DIST = 200    #500
+        self._MIN_AREA= 10000  #Area is calculated for Background Removal 
         self.mal_position=0
         self._mindistances = {}
 
@@ -56,7 +58,9 @@ class PeopleDetector:
                 if classId != 0:  # filter person class
                     continue
                 confidence = scores[classId]
-                if confidence > self._confidence:
+                area= int(detection[3] * frameHeight)*int(detection[2] * frameHeight)        
+                #the area is to remove people from back ground of queue [BACKGROUND REMOVAL]
+                if confidence > self._confidence and area > self._MIN_AREA:
                     center_x = int(detection[0] * frameWidth)
                     center_y = int(detection[1] * frameHeight)
                     width = int(detection[2] * frameWidth)
@@ -91,15 +95,13 @@ class PeopleDetector:
 
     def draw_pred(self, frame, classId, conf, left, top, right, bottom):
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 7)
-        self.find_min_distance(self._centers)
-        for k in self._mindistances:
-            cv2.line(frame, k[0], k[1], (0, 0, 255), 5)
-            self.mal_position=self.mal_position+1
+        self.find_min_distance(self._centers,frame) 
         
-    def find_min_distance(self, centers):
-        '''
-        return min euclidean distance between predicted anchor boxes
-        '''
+
+        
+    def find_min_distance(self, centers , frame):
+
+        #NON_MAX Suppersion
         centers=sorted(self._centers, key=itemgetter(0))
         new_centers=[]
         i=0
@@ -116,12 +118,19 @@ class PeopleDetector:
                      new_centers.append(centers[i])
 
             i=i+1  
-            
+   
+        flag_centers=[0]*len(new_centers)
+
+        ##Checking For Min_Distance and Calculate Number of Mal_Positioned
+        i=0
+        while i < (len(new_centers)-1):
+            if(abs(new_centers[i][0]-new_centers[i+1][0])<self._MIN_DIST):
+                flag_centers[i]=1
+                flag_centers[i+1]=1
+                cv2.line(frame, (new_centers[i]), (new_centers[i+1]), (0, 0, 255), 5)
+            i=i+1   
+        self.mal_position=flag_centers.count(1)        
         
-        comp = list(itertools.combinations(new_centers, 2))
-        for pts in comp:
-            ecdist = np.linalg.norm(np.asarray(pts[0])-np.asarray(pts[1]))
-            if(ecdist<100):
-                continue
-            if ecdist < self._MIN_DIST:
-                self._mindistances.update({pts: ecdist})
+        
+
+               
