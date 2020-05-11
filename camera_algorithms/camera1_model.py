@@ -25,9 +25,10 @@ class PeopleDetector:
         self._classIDs = []
         self._centers = []
         self._layerouts = []
-        self._MIN_DIST = 200    #500
+        self._MIN_DIST = 200    #500  
         self._MIN_AREA= 10000  #Area is calculated for Background Removal 
         self.mal_position=0
+        self._areas=[]
         self._mindistances = {}
 
     def load_network(self):
@@ -58,9 +59,11 @@ class PeopleDetector:
                 if classId != 0:  # filter person class
                     continue
                 confidence = scores[classId]
-                area= int(detection[3] * frameHeight)*int(detection[2] * frameHeight)        
+                area= int(detection[3] * frameHeight)*int(detection[2] * frameHeight)    
+                
                 #the area is to remove people from back ground of queue [BACKGROUND REMOVAL]
                 if confidence > self._confidence and area > self._MIN_AREA:
+                    self._areas.append(area) 
                     center_x = int(detection[0] * frameWidth)
                     center_y = int(detection[1] * frameHeight)
                     width = int(detection[2] * frameWidth)
@@ -82,6 +85,9 @@ class PeopleDetector:
             height = box[3]
             self.draw_pred(image, self._classIDs[i], self._confidences[i], left,
                            top, left + width, top + height)
+            #Set the min_distance according to prespective[Closeness] of pedestian in frame
+        self._MIN_DIST = (max(self._areas)+min(self._areas))/400
+        print(self._MIN_DIST)
         return self._centers,len(indices),self.mal_position
 
     def clear_preds(self):
@@ -130,7 +136,4 @@ class PeopleDetector:
                 cv2.line(frame, (new_centers[i]), (new_centers[i+1]), (0, 0, 255), 5)
             i=i+1   
         self.mal_position=flag_centers.count(1)        
-        
-        
-
-               
+         
