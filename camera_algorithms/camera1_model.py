@@ -6,9 +6,9 @@ import numpy as np
 from operator import itemgetter
 
 class PeopleDetector:
-    def __init__(self, yolocfg='camera_algorithms/yolo_weights/yolov3.cfg',
-                 yoloweights='camera_algorithms/yolo_weights/yolov3.weights',
-                 labelpath='camera_algorithms/yolo_weights/coco.names',
+    def __init__(self, yolocfg='model/yolov3.cfg',
+                 yoloweights='model/yolov3.weights',
+                 labelpath='model/coco.names',
                  confidence=0.8,#0.5.
                  nmsthreshold=0.4):
         self._yolocfg = yolocfg
