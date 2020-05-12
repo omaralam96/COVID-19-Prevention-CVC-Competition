@@ -74,9 +74,9 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 ## Limitation
 
 * With respect to camera 1
-> It may be slow for some Laptops ... so it is recomended to run the application using your GPU instead.
+> Running video may be slow depending on the specs of the laptop because YOLOv3 needs high specs to be realtime, so it is recomended to run the application using your GPU instead.
 
-*   With respect to Camera 2
+*   With respect to camera 2
 > Gloves have to be blue to be detected
 
 
