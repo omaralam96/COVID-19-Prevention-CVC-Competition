@@ -55,7 +55,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 2. Install the required packages.
 >pip install -r requirements.txt
 3. Install [pytesseract](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20200328.exe) for OCR detection
-4. Insert in ***model*** folder, download [yolo weights](https://pjreddie.com/media/files/yolov3.weights
+4. Download [yolo weights](https://pjreddie.com/media/files/yolov3.weights , then insert it in ***model*** folder, 
 )
 - - - 
 ## Usage
