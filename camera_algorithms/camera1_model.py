@@ -98,12 +98,21 @@ class PeopleDetector:
         self._layerouts = []
         self._mindistances = {}
         self.mal_position=0
-
+        
+#        self._MIN_DIST = 200    #500  
+#        self._MIN_AREA= 10000  #Area is calculated for Background Removal 
+#        self.mal_position=0
+        self._areas=[]
+        
     def draw_pred(self, frame, classId, conf, left, top, right, bottom):
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 7)
         self.find_min_distance(self._centers,frame) 
         
 
+
+    def clear_min_distace(self):
+        self._MIN_DIST = 200
+        
         
     def find_min_distance(self, centers , frame):
 

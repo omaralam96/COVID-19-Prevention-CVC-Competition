@@ -35,7 +35,7 @@ else:
     wb.save(filename=workbook_name)                        
 
 def Program():
-    global form,cap,flag_play,video_source,wb,sheet
+    global form,cap,flag_play,video_source,wb,sheet,net
     index=form.tabWidget.currentIndex()
     #In case we are in tab1(Social distancing) of GUI and user click play button
     if index == 0 and flag_play == 1:      
@@ -65,6 +65,9 @@ def Program():
             #Updating GUI Interface 
             form.video_before.setPixmap(QtGui.QPixmap(qImg))
             form.video_after.setPixmap(QtGui.QPixmap(qImg))
+            form.queue_total.setText("")
+            form.queue_danger.setText("")
+            camera1.net.clear_min_distace()
     #In case we are in tab2(Login system) of GUI    
     elif index == 1:
         # Read the frame from camera
