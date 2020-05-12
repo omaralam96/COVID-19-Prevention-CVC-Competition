@@ -13,7 +13,7 @@
 
 * [Usage](#Usage) 
 
-* [Limitation](#Limitation)
+* [Limitations](#Limitations)
 
 * [Our Team](#Our-team)
 
@@ -71,7 +71,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 <p align="center"><img  src = images/Login_Demo.gif ></p>
 
 - - - 
-## Limitation
+## Limitations
 
 * With respect to camera 1
 > Running video may be slow depending on the specs of the laptop because YOLOv3 needs high specs to be realtime, so it is recomended to run the application using your GPU instead.
