@@ -85,7 +85,7 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 ## Our-team
 
 
-1.   Omar Hesham Hanfy
+1.   Omar Hesham Hanafy
 2.   Omar Mohamed Alam
 3.   Martin Joseph William
 4.   Mark Youssef Shouhdy
