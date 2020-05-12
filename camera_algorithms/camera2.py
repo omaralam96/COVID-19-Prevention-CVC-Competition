@@ -13,7 +13,7 @@ glove_label=""
 emp_Id=""
 emp_Name=""
 emp_Time=""
-profile_pic=""
+profile_pic = cv2.imread("images/prof.png")
 ##counter for ocr after detecting ID card of employee
 counter_frames = 1
 ##show employee info for certain time after detecting his/her ID

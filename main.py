@@ -82,10 +82,9 @@ def Program():
         form.emp_name.setText(emp_Name)
         form.emp_time.setText(emp_Time)
         #Update the profile picture of employee if exist
-        if profile_pic !="" :
-            img = cv2.cvtColor(profile_pic, cv2.COLOR_BGR2RGB)
-            qImg = qimage2ndarray.array2qimage(img)
-            form.emp_profile.setPixmap(QtGui.QPixmap(qImg))
+        img = cv2.cvtColor(profile_pic, cv2.COLOR_BGR2RGB)
+        qImg = qimage2ndarray.array2qimage(img)
+        form.emp_profile.setPixmap(QtGui.QPixmap(qImg))
 
 #Event handler of browse button
 def browse_handler():
