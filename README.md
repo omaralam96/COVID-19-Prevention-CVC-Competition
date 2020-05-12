@@ -13,6 +13,8 @@
 
 * [Usage](#Usage) 
 
+* [Limitation](#Limitation)
+
 * [Our Team](#Our-team)
 
 
@@ -67,6 +69,17 @@ Our Project’s idea is to mimic the fingerprint systems that is found in compan
 *   Fingerprint system
 
 <p align="center"><img  src = images/Login_Demo.gif ></p>
+
+- - - 
+## Limitation
+
+
+*   With Respect to Camera 2
+> Gloves have to be blue to be dedtected
+
+* With respect to camera 1
+> It may be slow for some Laptop ... so it is recomended to run the application using your GPU instead.
+
 
 - - - 
 ## Our-team
